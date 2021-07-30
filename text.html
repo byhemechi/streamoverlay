@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overlay</title>
+    <style>
+        :root {
+            --lh: 1em;
+            --text: 'Text Goes Here'
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-family: Gotham;
+            color: #fff;
+        }
+
+        :root {
+            
+            font-size: 256px;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            /* background: #000; */
+            /* justify-content: center; */
+            /* flex-direction: column; */
+            padding: 256px;
+            box-sizing: border-box;
+        }
+
+        .image {
+            margin-right: .2em;
+            float: left;
+
+            padding-top: calc(var(--lh) * .18);
+        }
+
+        .image-container {
+            width: 1rem;
+            height: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1em;
+            border-radius: .25em;
+            background: linear-gradient(to top right, #90f, #00cfff);
+            font-size: .5em;
+        }
+
+        h1 {
+            font-size: 1em;
+            margin: 0;
+            flex: 1;
+            line-height: var(--lh);
+        }
+
+        h1::before {
+            content: var(--text);
+        }
+        .image-container::before {
+            content: var(--emoji);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="image">
+            <div class="image-container"></div>
+        </div>
+        <h1>.</h1>
+    </div>
+</body>
+
+</html>
